@@ -1,7 +1,6 @@
 @extends('base')
 @section('main')
 
-
 <div class="col-sm-12">  @if(session()->get('success'))    <div class="alert alert-success">      {{ session()->get('success') }}      </div>  @endif</div>
 
 <div class="row">
@@ -10,7 +9,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row" style="background-color:#e0e0e0;">
     <div class="col-sm-6">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ZI2Xn8dvwM0?si=FSYhuih9Tdc3OZfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
     <div class="col-sm-6">
@@ -21,7 +20,7 @@
 </div>
 <br/>
 
-<div class="row">
+<div class="row" style="border: 1px solid green ;">
     <div class="col-sm-8">
         <table class="table" id="roomlayout">
             <thead>
@@ -45,15 +44,13 @@
         A foglalás befejezéséhez és fizetéshez kattintson az alábbi gombra. Megszakított vásárlás esetén az űlőhelyek 2 perc után automatikusan felszabadulnak.
         <br/>
 
-        <div id="reservedlist"></div>  <a id="reserveBtn" style="margin: 19px;" href="/actualevent/reservation" class="btn btn-secondary disabled" disabled>Kijelölt székek foglalásának kifizetése</a></div>
-        
-    
+        <div id="reservedlist"></div>  
+        <a id="reserveBtn" style="margin: 19px;" href="/actualevent/reservation" class="btn btn-secondary disabled" disabled>Kijelölt székek foglalásának kifizetése</a>
     </div>
 </div>
-<br/><br/><br/>
-<div class="row">
-    <div class="col-sm-2" ></div>
-    <div class="col-sm-8" style="border: 1px solid green ;">
+<br/>
+<div class="row" style="background-color:#e0e0e0;">
+    <div class="col-sm-12">
     <h2 class="display-15">Tesztelési doboz</h2>
     <span>  <a id="frreupseats" style="margin: 19px;" href="#" class="btn btn-warning">😈 Véletlenszeűen 2 szék felszabadítása a könyebb teszteléshez 😈 </a></span>
     <span>  <a id="github" style="margin: 19px;" href="https://github.com/gerzsony/laravel-brdi-cinemaorder" class="btn btn-primary" target="_blank">Kód átnézése a Githubon</a></span>
@@ -61,8 +58,6 @@
     </div>    
 </div>
 <br/>
-
-
 
 
 <script type="text/javascript">
