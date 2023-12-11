@@ -9,14 +9,14 @@ A készítés menetének folyamatát a development.sh tartalmazza
 
 ## Telepítés saját gépre
 
--git repo lehúzása a gépre
--adatbázis létrehozása egy mysql/mariadb szerveren
--.env állományban beállítani az (üres) adatbázis kapcsolati adatait
--.env állományban beállítani a levelezőszerver kapcsolati beállításait
--állományok frissítése
--rendszer elindítása
+--git repo lehúzása a gépre
+--adatbázis létrehozása egy mysql/mariadb szerveren
+--.env állományban beállítani az (üres) adatbázis kapcsolati adatait
+--.env állományban beállítani a levelezőszerver kapcsolati beállításait
+--állományok frissítése
+--rendszer elindítása
 
-''
+'''
 git clone https://github.com/gerzsony/laravel-brdi-cinemaorder.git
 
 mysql -u root -p
@@ -50,7 +50,7 @@ npm install
 php artisan serve
 
 #check localhost:8000
-''
+'''
 
 ##Használat
 
@@ -58,11 +58,15 @@ http://localhost:8000/actualevent
 
 ## Elérhető API
 
-GET /eventdata/seats
-POST /eventdata/tmp_reservation
-GET /eventdata/delaftertime
-GET /eventdata/forcedel2seats
+--GET /eventdata/seats
+--POST /eventdata/tmp_reservation
+--GET /eventdata/delaftertime
+--GET /eventdata/forcedel2seats
 
-## Ideiglenes apllikáció
+## Ideiglenes tárhelyen az apllikáció
 
-brdi.dev.probaljaki.hu
+általános info:
+http://brdi.dev.probaljaki.hu
+
+az app lényegi kezdőoldala:
+http://brdi.dev.probaljaki.hu/actualevent

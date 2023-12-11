@@ -60,5 +60,8 @@ git init
 #edit readme.md
 
 git add .
-
 git commit -m "initial commit"
+git branch -M main
+git remote add origin https://github.com/gerzsony/laravel-brdi-cinemaorder.git
+git push -u origin main
+
