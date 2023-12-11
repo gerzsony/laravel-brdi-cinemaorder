@@ -31,17 +31,17 @@ ctrl-c
 #setting up .env file (database section) Example is here: 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
-DB_PORT=3307
+DB_PORT=3306
 DB_DATABASE=laravel_brdi_cinemaorder
 DB_USERNAME=root
 DB_PASSWORD=
 
 #setting up .env file (mail sending section) Example is here: 
-MAIL_MAILER=sendmail
-MAIL_HOST=mailpit
-MAIL_PORT=1025
-MAIL_USERNAME=null
-MAIL_PASSWORD=null
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.yourprovider.com
+MAIL_PORT=587
+MAIL_USERNAME=yourloginname
+MAIL_PASSWORD=yourpassword
 MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS="hello@dev.probaljaki.hu"
 MAIL_FROM_NAME="${APP_NAME}"
@@ -73,8 +73,8 @@ http://localhost:8000/actualevent
 
 ## Ideiglenes tárhelyen az apllikáció
 
-általános info:
-http://brdi.dev.probaljaki.hu
-
-az app lényegi kezdőoldala:
+Az app kezdőoldala:
 http://brdi.dev.probaljaki.hu/actualevent
+
+Fejlesztői adatlap:
+http://brdi.dev.probaljaki.hu

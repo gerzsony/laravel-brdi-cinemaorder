@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use Session;
+use Mail;
 //use Request;
 
 class OrderController extends Controller
@@ -112,9 +113,13 @@ class OrderController extends Controller
         $name = $request->get('name');
         $email = $request->get('email');
 
-        $orders = Order::where(['event_id' => '165', 'person_session' => $sess])->get(['id','seat_id', 'order_status']);
+        $orders = Order::where(['event_id' => '165', 'person_session' => $sess, 'order_status' => 'tmp_reserved' ])->get(['id','seat_id', 'order_status']);
 
+
+        $seat_ids = "";
         foreach($orders as $oneOrder){
+
+            $seat_ids .= "[" . $oneOrder->seat_id ."] ";
 
             $oneOrder->order_date = date("Y-m-d H:i:s");
             $oneOrder->person_name = $name;
@@ -124,10 +129,16 @@ class OrderController extends Controller
             $oneOrder->save();
         } 
         
-        
-
-
-        //return response()->json(['data' => 'A jegyvásárlás sikeres. E-mailben elküldtük a részleteket'], 200); 
+        //Send Email
+        $data["email"] = $email;
+        $data["name"] =  $name;
+    
+        Mail::send('ordermail', ['seat_ids'=> $seat_ids, 'name' => $name], function ($message) use ($data){
+            $message->to($data["email"], $data["name"]);
+            $message->subject("Jegyvásárlás - " . $data["name"]);
+        });;
+    
+ 
         return redirect('/actualevent')->with('status', 'A jegyvásárlás sikeres. E-mailben elküldtük a részleteket'); 
     }
 

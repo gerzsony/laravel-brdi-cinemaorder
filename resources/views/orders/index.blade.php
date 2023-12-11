@@ -55,9 +55,9 @@
     <div class="col-sm-2" ></div>
     <div class="col-sm-8" style="border: 1px solid green ;">
     <h2 class="display-15">Tesztelési doboz</h2>
-    <span>  <a id="frreupseats" style="margin: 19px;" href="" class="btn btn-warning">😈 Véletlenszeűen 2 szék felszabadítása a könyebb teszteléshez 😈 </a></span>
-    <span>  <a id="github" style="margin: 19px;" href="" class="btn btn-primary" target="_blank">Kód átnézése a Githubon</a></span>
-    <span>  <a id="overview" style="margin: 19px;" href="" class="btn btn-primary" target="_blank">Projekt Áttekintő oldal</a></span>
+    <span>  <a id="frreupseats" style="margin: 19px;" href="#" class="btn btn-warning">😈 Véletlenszeűen 2 szék felszabadítása a könyebb teszteléshez 😈 </a></span>
+    <span>  <a id="github" style="margin: 19px;" href="https://github.com/gerzsony/laravel-brdi-cinemaorder" class="btn btn-primary" target="_blank">Kód átnézése a Githubon</a></span>
+    <span>  <a id="overview" style="margin: 19px;" href="/" class="btn btn-primary" target="_blank">Fejlesztő adatlapja</a></span>
     </div>    
 </div>
 <br/>
