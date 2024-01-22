@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('person_email')->nullable();
             $table->enum('order_status', ['free', 'tmp_reserved', 'sold'] )->nullable();
         });
+        $table->unique(['event_id', 'seat_id']);
     }
 
     /**
