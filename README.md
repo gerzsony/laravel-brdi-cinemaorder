@@ -1,8 +1,3 @@
-## A projektről
-
-A projekt egy tesztfeladat az egyik vállalathoz. A feladat leírását ők tudják. (A repo publikus)
-
-
 ## A készítés menete
 
 A készítés menetének folyamatát a development.sh tartalmazza
@@ -70,11 +65,3 @@ http://localhost:8000/actualevent
 > GET /eventdata/delaftertime
 > 
 > GET /eventdata/forcedel2seats
-
-## Ideiglenes tárhelyen az apllikáció
-
-Az app kezdőoldala:
-http://brdi.dev.probaljaki.hu/actualevent
-
-Fejlesztői adatlap:
-http://brdi.dev.probaljaki.hu
